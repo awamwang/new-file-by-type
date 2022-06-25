@@ -31,5 +31,29 @@
         "**/.git/objects/**",
         ".vscode",
         "**tpl"
+    ],
+    "i18n-ally.localesPaths": [
+        "template/i18n",
+        "template/search/i18n",
+        "template/translate/i18n",
+        "template/new/afile/i18n",
+        "template/new/c-cpp/i18n",
+        "template/new/gitignore/i18n",
+        "template/new/go/i18n",
+        "template/new/java/i18n",
+        "template/new/js/i18n",
+        "template/new/license/i18n",
+        "template/new/python/i18n",
+        "template/new/scala/i18n",
+        "template/new/ts/i18n",
+        "template/new/web/i18n",
+        "template/new/js/common/i18n",
+        "template/new/js/jquery/i18n",
+        "template/new/js/react/i18n",
+        "template/new/js/vue/i18n",
+        "template/new/ts/angular/i18n",
+        "template/new/ts/common/i18n",
+        "template/new/ts/react/i18n",
+        "template/new/ts/vue/i18n"
     ]
 }
