@@ -1,0 +1,27 @@
+{
+  "packageManager": "pnpm@7.1.0",
+  "name": "$0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "lint": "eslint --ext .js,.ts packages",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Awam Wang",
+  "license": "ISC",
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "eslint",
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  }
+}

@@ -21,7 +21,16 @@
           }
         },
         {
-          "label": "pnpm-npmrc",
+          "label": "vscode:settings.json",
+          "value": {
+            "suffix": ".json",
+            "tpl": "vscode-settings.tpl.json",
+            "filepath": "{{path.resolve(projectFolder, './.vscode/.settings.json')}}",
+            "defaultName": "settings"
+          }
+        },
+        {
+          "label": "pnpm:npmrc",
           "value": {
             "suffix": ".npmrc",
             "tpl": "pnpm.npmrc",
@@ -29,11 +38,51 @@
           }
         },
         {
-          "label": "pnpm-workspace.yaml",
+          "label": "pnpm:workspace.yaml",
           "value": {
             "suffix": ".yaml",
             "tpl": "pnpm-workspace.yaml",
             "defaultName": "pnpm-workspace"
+          }
+        },
+        {
+          "label": "package-pnpm-mono",
+          "value": {
+            "suffix": ".json",
+            "tpl": "package-pnpm-mono.json",
+            "defaultName": "package"
+          }
+        },
+        {
+          "label": ".prettierrc.js",
+          "value": {
+            "suffix": ".js",
+            "tpl": ".prettierrc.tpl.js",
+            "defaultName": ".prettierrc"
+          }
+        },
+        {
+          "label": "babel.config.js",
+          "value": {
+            "suffix": ".js",
+            "tpl": "babel.config.tpl.js",
+            "defaultName": "babel.config"
+          }
+        },
+        {
+          "label": ".eslintrc.js",
+          "value": {
+            "suffix": ".js",
+            "tpl": ".eslintrc.tpl.js",
+            "defaultName": ".eslintrc"
+          }
+        },
+        {
+          "label": ".eslintignore",
+          "value": {
+            "suffix": ".eslintignore",
+            "tpl": ".eslintignore.tpl",
+            "defaultName": ""
           }
         },
         {
@@ -42,6 +91,14 @@
             "suffix": ".gitignore",
             "tpl": ".gitignore.tpl",
             "defaultName": ".gitignore"
+          }
+        },
+        {
+          "label": "scripts:dev-deps",
+          "value": {
+            "suffix": ".sh",
+            "tpl": "scripts-dev-deps.sh",
+            "defaultName": "dev-deps"
           }
         }
       ]
