@@ -1,0 +1,74 @@
+{
+  "name": "Awam File",
+  "renderComment": false,
+  "targets": [
+    {
+      "filepath": "{{path.resolve(projectFolder, inputs.srcPath, inputs.filename + inputs.fileType.suffix)}}",
+      "tplpath": "{{inputs.fileType.tpl}}"
+    }
+  ],
+  "inputs": [
+    {
+      "type": "select",
+      "name": "fileType",
+      "items": [
+        {
+          "label": "None",
+          "value": {
+            "suffix": "",
+            "tpl": "tpl",
+            "defaultName": "Untitled"
+          }
+        },
+        {
+          "label": "pnpm-npmrc",
+          "value": {
+            "suffix": ".npmrc",
+            "tpl": "pnpm.npmrc",
+            "defaultName": ""
+          }
+        },
+        {
+          "label": "pnpm-workspace.yaml",
+          "value": {
+            "suffix": ".yaml",
+            "tpl": "pnpm-workspace.yaml",
+            "defaultName": "pnpm-workspace"
+          }
+        },
+        {
+          "label": ".gitignore",
+          "value": {
+            "suffix": ".gitignore",
+            "tpl": ".gitignore.tpl",
+            "defaultName": ".gitignore"
+          }
+        }
+      ]
+    },
+    {
+      "type": "path",
+      "name": "srcPath",
+      "prompt": "{{i18n('inputs.srcPath.prompt')}}",
+      "placeHolder": "{{i18n('inputs.srcPath.placeHolder')}}",
+      "value": "{{helper.activeDirectoryRelativeBasePath(projectFolder)}}",
+      "suggest": {
+        "value": "{{helper.flatAndFilterSuggestPath(projectFolder, 'src')}}"
+      }
+    },
+    {
+      "type": "text",
+      "name": "filename",
+      "prompt": "{{i18n('inputs.filename.prompt')}}",
+      "placeHolder": "{{i18n('inputs.filename.placeHolder')}}",
+      "value": "{{ inputs.fileType.suffix === '.gitignore' ? '' : undefined }}",
+      "suggest": {
+        "selected": true,
+        "value": "{{inputs.fileType.defaultName}}"
+      }
+    }
+  ],
+  "match": {
+    "always": true
+  }
+}

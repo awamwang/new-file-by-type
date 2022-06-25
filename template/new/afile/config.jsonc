@@ -424,6 +424,14 @@
 						"defaultName": "config"
 					}
 				},
+				{
+					"label": "pnpm-workspace.yaml",
+					"value": {
+						"suffix": ".yaml",
+						"tpl": "pnpm-workspace.yaml",
+						"defaultName": "pnpm-workspace"
+					}
+				},
 			]
 		},
 		{
