@@ -2,39 +2,22 @@ module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2020
+    ecmaVersion: 2020,
+    tsconfigRootDir: __dirname,
+    project: ['./tsconfig.json'],
     // sourceType: 'module'
   },
-  plugins: ['prettier', 'node'],
-  extends: ['eslint:recommended'],
+  plugins: ['@typescript-eslint', 'prettier', 'node'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+    'plugin:eslint-comments/recommended',
+  ],
   env: {
-    node: true
+    node: true,
   },
-  overrides: [
-    {
-      files: ['packages/**/*.ts'],
-      parser: '@typescript-eslint/parser',
-      plugins: ['@typescript-eslint'],
-      parserOptions: {
-        tsconfigRootDir: __dirname,
-        project: ['./tsconfig.eslint.json', './packages/*/tsconfig.json']
-      },
-      extends: [
-        'plugin:@typescript-eslint/recommended',
-        'plugin:prettier/recommended',
-        'plugin:eslint-comments/recommended'
-        // 'plugin:node/recommended',
-        // 'plugin:@typescript-eslint/recommended-requiring-type-checking',
-      ],
-      rules: {
-        // "@typescript-eslint/unbound-method": [
-        //   // 'warn',
-        //   0,
-        //   {
-        //     ignoreStatic: true,
-        //   },
-        // ],
-      }
-    }
-  ]
+  rules: {
+    'prettier/prettier': 'error',
+  },
 }

@@ -46,10 +46,18 @@
           }
         },
         {
-          "label": "package-pnpm-mono",
+          "label": "package:pnpm-mono",
           "value": {
             "suffix": ".json",
             "tpl": "package-pnpm-mono.json",
+            "defaultName": "package"
+          }
+        },
+        {
+          "label": "package:workspace",
+          "value": {
+            "suffix": ".json",
+            "tpl": "package-workspace.json",
             "defaultName": "package"
           }
         },
@@ -70,10 +78,18 @@
           }
         },
         {
-          "label": ".eslintrc.js",
+          "label": ".eslintrc",
           "value": {
             "suffix": ".js",
             "tpl": ".eslintrc.tpl.js",
+            "defaultName": ".eslintrc"
+          }
+        },
+        {
+          "label": ".eslintrc:workspace",
+          "value": {
+            "suffix": ".js",
+            "tpl": ".eslintrc-workspace.tpl.js",
             "defaultName": ".eslintrc"
           }
         },
@@ -86,6 +102,14 @@
           }
         },
         {
+          "label": ".stylelintrc.js",
+          "value": {
+            "suffix": ".js",
+            "tpl": ".stylelintrc.tpl.js",
+            "defaultName": ".stylelintrc"
+          }
+        },
+        {
           "label": ".gitignore",
           "value": {
             "suffix": ".gitignore",
@@ -94,11 +118,27 @@
           }
         },
         {
+          "label": "tsconfig:workspace",
+          "value": {
+            "suffix": ".json",
+            "tpl": "tsconfig.workspace.tpl.json",
+            "defaultName": "tsconfig"
+          }
+        },
+        {
           "label": "scripts:dev-deps",
           "value": {
             "suffix": ".sh",
             "tpl": "scripts-dev-deps.sh",
             "defaultName": "dev-deps"
+          }
+        },
+        {
+          "label": "scripts:dev-deps-vite",
+          "value": {
+            "suffix": ".sh",
+            "tpl": "scripts-dev-deps-vite.sh",
+            "defaultName": "dev-deps-vite"
           }
         }
       ]
