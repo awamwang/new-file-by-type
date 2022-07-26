@@ -5,24 +5,25 @@
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
+  ignorePatterns: ['.eslintrc.js', 'node_modules/', 'dist/'],
   parserOptions: {
     ecmaVersion: 2020,
     // sourceType: 'module',
     tsconfigRootDir: __dirname,
-    project: ['./tsconfig.eslint.json', './packages/*/tsconfig.json'],
+    project: ['./tsconfig.eslint.json', './packages/**/tsconfig.json']
   },
   plugins: ['@typescript-eslint', 'prettier', 'node'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
-    'plugin:eslint-comments/recommended',
+    'plugin:eslint-comments/recommended'
   ],
   env: {
-    node: true,
+    node: true
   },
   rules: {
-    'prettier/prettier': 'error',
+    'prettier/prettier': 'error'
   },
   overrides: [
     {
@@ -30,20 +31,17 @@ module.exports = {
       parser: 'vue-eslint-parser',
       parserOptions: {
         parser: '@typescript-eslint/parser',
+        project: ['./packages/front/tsconfig.json']
       },
-      extends: [
-        'plugin:vue/vue3-essential',
-        '@vue/typescript/recommended',
-        './packages/front/.eslintrc-auto-import.json',
-      ],
+      extends: ['plugin:vue/vue3-essential', '@vue/typescript/recommended'],
       env: {
-        'vue/setup-compiler-macros': true,
+        'vue/setup-compiler-macros': true
       },
       rules: {
         'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-        'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+        'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
       },
-      globals: { RouterNext: true },
-    },
-  ],
+      globals: { RouterNext: true }
+    }
+  ]
 }

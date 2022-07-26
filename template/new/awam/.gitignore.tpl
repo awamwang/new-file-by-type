@@ -27,4 +27,6 @@ __pycache__/
 \.env
 envs/*.env
 
+packages/*/src/**/*.map
+
 $0

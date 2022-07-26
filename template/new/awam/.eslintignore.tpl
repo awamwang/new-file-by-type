@@ -1,2 +1,4 @@
 flow
 dist
+node_modules
+coverage
