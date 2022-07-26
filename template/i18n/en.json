@@ -108,5 +108,8 @@
 	"value.type.enum": "Type is: enum value",
 
 	"renameOnlyOneFile": "Rename only supports selecting a file or directory",
-	"pleaseInputNewFileName": "Please input new file name"
+	"pleaseInputNewFileName": "Please input new file name",
+
+
+	"awam.description": "awam Project"
 }

@@ -118,6 +118,38 @@
           }
         },
         {
+          "label": "tsconfig:root",
+          "value": {
+            "suffix": ".json",
+            "tpl": "tsconfig.tpl.json",
+            "defaultName": "tsconfig"
+          }
+        },
+        {
+          "label": "tsconfig:root-build",
+          "value": {
+            "suffix": ".json",
+            "tpl": "tsconfig.build.tpl.json",
+            "defaultName": "tsconfig.build"
+          }
+        },
+        {
+          "label": "tsconfig:root-build-esm",
+          "value": {
+            "suffix": ".json",
+            "tpl": "tsconfig.build.esm.tpl.json",
+            "defaultName": "tsconfig.build.esm"
+          }
+        },
+        {
+          "label": "tsconfig:root-eslint",
+          "value": {
+            "suffix": ".json",
+            "tpl": "tsconfig.eslint.tpl.json",
+            "defaultName": "tsconfig.eslint"
+          }
+        },
+        {
           "label": "tsconfig:workspace",
           "value": {
             "suffix": ".json",

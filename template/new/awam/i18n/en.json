@@ -1,4 +1,7 @@
 {
 	"inputs.fileType.prompt": "Please select file type",
-	"inputs.fileType.placeHolder": "Please select file type"
+	"inputs.fileType.placeHolder": "Please select file type",
+
+	"egg": "Egg.js",
+	"egg.description": "Create a Egg.js JavaScript Type"
 }
