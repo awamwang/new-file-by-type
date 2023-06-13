@@ -184,8 +184,8 @@
         {
           "label": "python:requirements",
           "value": {
-            "suffix": ".json",
-            "tpl": "requirements.tpl.json",
+            "suffix": ".txt",
+            "tpl": "requirements.tpl.txt",
             "defaultName": "requirements"
           }
         }
