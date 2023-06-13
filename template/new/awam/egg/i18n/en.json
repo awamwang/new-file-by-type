@@ -1,7 +1,0 @@
-{
-	"templateSelectPlaceHolder": "Please select a file type",
-	"entry": "Entry",
-	"entry.description": "Create a Egg.js entry file",
-	"component": "Single file component",
-	"component.description": "Create a Egg.js Single file component"
-}

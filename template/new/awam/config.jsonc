@@ -172,6 +172,22 @@
             "tpl": "scripts-dev-deps-vite.sh",
             "defaultName": "dev-deps-vite"
           }
+        },
+        {
+          "label": "tdx:func",
+          "value": {
+            "suffix": ".tdxf",
+            "tpl": "tdx-func.tpl.tdxf",
+            "defaultName": "tdx-func"
+          }
+        },
+        {
+          "label": "python:requirements",
+          "value": {
+            "suffix": ".json",
+            "tpl": "requirements.tpl.json",
+            "defaultName": "requirements"
+          }
         }
       ]
     },
